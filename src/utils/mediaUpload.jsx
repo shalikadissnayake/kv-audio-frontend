@@ -19,7 +19,8 @@ export default function mediaUpload(file){
         upsert: false,
     }).then(()=>{
 
-        const publicUrl = supabase.storage.from("images").getPublicUrl(file.name).data.publicUrl;
+        const publicUrl = supabase.storage.from("images").getPublicUrl(fileName).data.publicUrl;
+
         resolve(publicUrl);
     }).catch(()=>{
         reject("Error uploading file")
