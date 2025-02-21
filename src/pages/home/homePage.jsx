@@ -10,7 +10,7 @@ export default function HomePage(){
     return(
         <>
         <Header/>
-        <div className="h-[calc(100vh-100px)]  w-full ">
+        <div className="h-[calc(100vh-100px)]  w-full bg-primary">
         <Routes path="/*">
          <Route path="/contact" element={<Contact/>}/>
          <Route path="/gallery" element={<Gallery/>}/>
@@ -18,6 +18,7 @@ export default function HomePage(){
          <Route path="/" element={<Home/>}/>
          <Route path="/*" element={<ErrorNotFound/>}/>
         </Routes>
+        
         </div>
         </>
     )
