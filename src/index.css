@@ -1,7 +1,7 @@
 
-@import "tailwindcss/preflight";  /* Replaces @tailwind base */
-@import "tailwindcss/utilities";  /* Replaces @tailwind components */
-@import "tailwindcss";            /* Ensures Tailwind is loaded */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 
 
