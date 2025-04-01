@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import mediaUpload from "../../utils/mediaUpload";
 
 export default function AddItemPage() {
     const [productKey, setProductKey] = useState("");
@@ -10,21 +11,54 @@ export default function AddItemPage() {
     const [productCategory, setProductCategory] = useState("audio");
     const [productDimensions, setProductDimensions] = useState("");
     const [productDescription, setProductDescription] = useState("");
+    const [productImages, setProductImages]= useState([]);
     const navigate = useNavigate()
 
     async function handleAddItem(){
+        console.log(productImages)
+
+        const promises = []
+        for (let i=0;i<productImages.length; i++){
+            console.log(productImages[i])
+            const promise= mediaUpload(productImages[i])
+            promises.push(promise)
+        }
+
+
+
+        try{
+      
+
+            
+           
+        }catch(err){
+            toast.error(err)
+        }
         console.log(productKey,productName,productPrice,productCategory,productDescription,productDimensions);
         const token= localStorage.getItem("token")
 
         if(token){
             try{
+        // Promise.all(promises).then((result)=>{
+
+        //     console.log(result)
+
+        // }).catch((err)=>{
+        //     toast.error(err)
+        // })
+
+            
+        const imageUrls = await Promise.all(promises);
+        
             const result = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/products`,{
                 key : productKey,
                 name : productName,
                 price : productPrice,
                 category: productCategory,
                 dimentions: productDimensions,
-                description: productDescription
+                description: productDescription,
+                image: imageUrls,
+
             },{
                 headers : {
                     Authorization:"Bearer " + token,
@@ -91,6 +125,7 @@ export default function AddItemPage() {
                     placeholder="Product Description"
                     className="border p-2 w-full"
                 />
+                <input type="file" multiple onChange={(e)=>{setProductImages(e.target.files)}} className="w-full p-2 border rounded"/>
                 <button onClick={handleAddItem} className="w-full bg-blue-500 text-white px-4 py-2 mt-2 rounded hover:bg-blue-500">Add</button>
                 <button onClick={()=>{navigate("/admin/items")}} className="w-full bg-red-600 text-white px-4 py-2 mt-2 rounded hover:bg-red-600">Cancel</button>
             </div>
