@@ -118,7 +118,7 @@ export default function LoginPage() {
   className="my-6 w-[300px] h-[50px] bg-white text-black rounded-lg flex items-center justify-center gap-3 cursor-pointer"
   onClick={googleLogin}
 >
-  <img src="/public/google-icon.png" alt="Google" className="w-6 h-6" />
+  <img src="/google-icon.png" alt="Google" className="w-6 h-6" />
   <span className="text-lg font-semibold">Login with Google</span>
 </div>
   </div>
