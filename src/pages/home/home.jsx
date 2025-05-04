@@ -23,22 +23,23 @@ export default function HomePage() {
         <h2 className="text-3xl text-black font-bold text-center mb-12">Top Picks</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {[
-            {
-              name: "Buffle",
-              img: "/public/bluetooth speaker.jpeg",
-              desc: "Feel the beat with deep, rich bass.",
-            },
-            {
-              name: "MIC",
-              img: "/public/speaker2.jpg",
-              desc: "360° immersive sound, anywhere.",
-            },
-            {
-              name: "Head Set",
-              img: "/public/headphone.jpeg",
-              desc: "Precision sound for true clarity.",
-            },
-          ].map((item, index) => (
+  {
+    name: "Buffle",
+    img: "/bluetooth speaker.jpeg",  // ✅ remove /public
+    desc: "Feel the beat with deep, rich bass.",
+  },
+  {
+    name: "MIC",
+    img: "/speaker2.jpg",
+    desc: "360° immersive sound, anywhere.",
+  },
+  {
+    name: "Head Set",
+    img: "/headphone.jpeg",
+    desc: "Precision sound for true clarity.",
+  },
+]
+.map((item, index) => (
             <div
               key={index}
               className="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300"
