@@ -3,27 +3,27 @@ import { useNavigate } from "react-router-dom";
 
 const images = [
   {
-    src: "/public/speaker1.jpg",
+    src: "/speaker1.jpg",
     title: "Buffle Bass",
   },
   {
-    src: "/public/speaker2.jpg",
+    src: "/speaker2.jpg",
     title: "EchoSphere",
   },
   {
-    src: "/public/bluetooth speaker.jpeg",
+    src: "/bluetooth speaker.jpeg",
     title: "Speaker Pro",
   },
   {
-    src: "/public/headphone.jpeg",
+    src: "/headphone.jpeg",
     title: "Headphone",
   },
   {
-    src: "/public/aud.jpeg",
+    src: "/aud.jpeg",
     title: "MIC",
   },
   {
-    src: "/public/st mic.jpeg",
+    src: "/st mic.jpeg",
     title: "MIC X",
   },
 ];
