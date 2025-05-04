@@ -58,11 +58,11 @@ export default function BookingPage(){
     }
 
     return(
-        <div className="w-full h-full flex flex-col items-center ">
-            <h1 className="text-2xl font-bold text-accent">Create Booking</h1>
-            <div className="w-full flex flex-col items-center gap-4 mt-4">
+        <div className="w-full h-full flex flex-col bg-gradient-to-br from-blue-500 to-black items-center ">
+            <h1 className="text-2xl font-bold text-black">Create Booking</h1>
+            <div className="w-full flex flex-col  items-center gap-4 mt-4">
                 <label className="flex flex-col">
-                    <span className="text-accent font-semibold">Starting Date:</span>
+                    <span className="text-white font-semibold">Starting Date:</span>
                     <input 
                         type="date" 
                         value={startingDate} 
@@ -71,7 +71,7 @@ export default function BookingPage(){
                     />
                 </label>
                 <label className="flex flex-col">
-                    <span className="text-accent font-semibold">Ending Date:</span>
+                    <span className="text-white font-semibold">Ending Date:</span>
                     <input 
                         type="date" 
                         value={endingDate} 
@@ -79,7 +79,7 @@ export default function BookingPage(){
                         className="border border-secondary rounded-md p-2" 
                     />
                 </label>
-                <p className="text-accent font-medium">Total Days: {daysBetween}</p>
+                <p className="text-white font-medium">Total Days: {daysBetween}</p>
             </div>
             <div className="w-full flex flex-col items-center mt-4">
                 {

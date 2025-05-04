@@ -58,7 +58,7 @@ export default function AdminItemsPage() {
       {itemsLoaded &&<div className="overflow-x-auto">
         <table className="w-full max-w-full border-collapse bg-white shadow-md rounded-lg">
           <thead>
-            <tr className="bg-gray-800 text-white text-left">
+            <tr className="bg-blue-800 text-white text-left">
               <th className="p-3">Key</th>
               <th className="p-3">Name</th>
               <th className="p-3">Price ($)</th>
@@ -72,9 +72,9 @@ export default function AdminItemsPage() {
             {items.map((product) => (
               <tr
                 key={product.key}
-                className="border-b hover:bg-gray-100 transition duration-200"
+                className="border-b hover:bg-gray-100 text-blue-800  transition duration-200"
               >
-                <td className="p-3">{product.key}</td>
+                <td className="p-3 ">{product.key}</td>
                 <td className="p-3">{product.name}</td>
                 <td className="p-3">${product.price.toFixed(2)}</td>
                 <td className="p-3">{product.category}</td>

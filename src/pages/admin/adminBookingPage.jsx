@@ -63,7 +63,7 @@ export default function AdminOrdersPage() {
 				<p className="text-center text-gray-600">Loading...</p>
 			) : (
 				<div className="overflow-x-auto">
-					<table className="min-w-full bg-white border border-gray-300 rounded-lg shadow-md">
+					<table className="min-w-full text-blue-800 bg-white border border-gray-300 rounded-lg shadow-md">
 						<thead className="bg-gray-200">
 							<tr>
 								<th className="px-4 py-2 text-left">Order ID</th>

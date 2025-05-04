@@ -52,7 +52,7 @@ export default function AdminUsersPage() {
 				<p className="text-center text-gray-600">Loading...</p>
 			) : (
 				<div className="overflow-x-auto">
-					<table className="min-w-full bg-white border border-gray-300 rounded-lg shadow-md">
+					<table className="min-w-full bg-white text-blue-800 border border-blue-300 rounded-lg shadow">
 						<thead className="bg-gray-200">
 							<tr>
 								<th className="px-4 py-2 text-left">Profile</th>
@@ -67,7 +67,7 @@ export default function AdminUsersPage() {
 						<tbody>
 							{users.map((user) => (
 								<tr key={user._id} className="border-t hover:bg-gray-100">
-									<td className="px-4 py-2">
+									<td className="px-4 py-2 ">
 										<img
 											src={
 												user.profilePicture || "https://via.placeholder.com/50"
@@ -76,7 +76,7 @@ export default function AdminUsersPage() {
 											className="w-10 h-10 rounded-full"
 										/>
 									</td>
-									<td className="px-4 py-2">
+									<td className="px-4 py-2 ">
 										{user.firstName} {user.lastName}
 									</td>
 									<td className="px-4 py-2">{user.email}</td>
